@@ -14,7 +14,9 @@ class ApotekerController extends Controller
 {
     public function index()
     {
-        $visits = Visit::with('patient')->latest()->paginate(10);
+        $visits = Visit::with(['patient', 'diagnoses'])
+                    ->latest()
+                    ->paginate(10);
         return view('dashboard.apoteker', compact('visits'));
     }
     

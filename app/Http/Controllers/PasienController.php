@@ -40,7 +40,7 @@ class PasienController extends Controller
 
     public function pasienLama()
     {
-        $patients = Patient::all();
+        $patients = Patient::latest()->paginate(10);
         return view('pasien.lama', compact('patients'));
     }
 
@@ -86,5 +86,19 @@ class PasienController extends Controller
         ]);
 
         return view('pasien.pasien-detail', compact('visit'));
+    }
+
+    public function destroy(Visit $visit)
+    {
+        $visit->delete();
+
+        return redirect()->back()->with('success', 'Data kunjungan berhasil dihapus.');
+    }
+
+    public function destroyPasien($id)
+    {
+        $patient = Patient::findOrFail($id);
+        $patient->delete();
+        return redirect()->route('pasien.lama')->with('success', 'Data pasien berhasil dihapus.');
     }
 }

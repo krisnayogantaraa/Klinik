@@ -57,11 +57,13 @@ Route::middleware('auth')->group(function () {
 Route::middleware(['auth', 'role:pendaftaran'])->group(function () {
     Route::get('/dashboard/pendaftaran', [PendaftaranController::class, 'index'])->name('dashboard.pendaftaran');
     Route::get('/pasien/baru', [PasienController::class, 'create'])->name('pasien.baru');
+    Route::delete('/visits/{visit}', [PasienController::class, 'destroy'])->name('visits.destroy');
     Route::post('/pasien/baru', [PasienController::class, 'store'])->name('pasien.store');
     Route::get('/pasien/lama', [PasienController::class, 'pasienLama'])->name('pasien.lama');
     Route::post('/pasien/lama/registrasi/{patient}', [PasienController::class, 'registrasiPasienLama'])->name('pasien.lama.registrasi');
     Route::get('/pasien/{id}/edit', [PasienController::class, 'edit'])->name('pasien.edit');
     Route::put('/pasien/{id}', [PasienController::class, 'update'])->name('pasien.update');
+    Route::delete('/pasien/{id}', [PasienController::class, 'destroyPasien'])->name('pasien.destroy');
 });
 
 Route::middleware(['auth', 'role:perawat'])->group(function () {
