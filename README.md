@@ -33,7 +33,7 @@
 
 ```bash
 git clone https://github.com/krisnayogantaraa/Klinik.git
-cd laravel-klinik
+cd klinik
 ```
 
 2. **Install Dependency**

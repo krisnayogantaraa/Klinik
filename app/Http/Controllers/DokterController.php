@@ -44,4 +44,11 @@ class DokterController extends Controller
         return redirect()->route('pasien.detail', $visit->id)->with('success', 'Diagnosa berhasil ditambahkan.');
     }
 
+    public function destroyDiagnosis(Diagnosis $diagnosis)
+    {
+        $visitId = $diagnosis->visit_id;
+        $diagnosis->delete();
+        return redirect()->route('pasien.detail', $visitId)->with('success', 'Diagnosa berhasil dihapus.');
+    }
+
 }

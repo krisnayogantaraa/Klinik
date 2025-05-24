@@ -70,6 +70,8 @@ Route::middleware(['auth', 'role:perawat'])->group(function () {
     Route::get('/dashboard/perawat', [PerawatController::class, 'index'])->name('dashboard.perawat');
     Route::get('/checkup/create/{visit}', [CheckupController::class, 'create'])->name('checkup.create');
     Route::post('/checkup/store/{visit}', [CheckupController::class, 'store'])->name('checkup.store');
+    Route::get('/checkup/{checkup}/edit', [CheckupController::class, 'edit'])->name('checkup.edit');
+    Route::put('/checkup/{checkup}', [CheckupController::class, 'update'])->name('checkup.update');
 });
 
 Route::middleware(['auth', 'role:perawat|dokter|apoteker'])->get('/pasien/{visit}/detail', [PasienController::class, 'showDetail'])->name('pasien.detail');
@@ -79,7 +81,7 @@ Route::middleware(['auth', 'role:dokter'])->group(function () {
     
     Route::get('/dokter/diagnosis/{visit}/create', [DokterController::class, 'createDiagnosis'])->name('diagnosis.create');
     Route::post('/dokter/diagnosis/{visit}', [DokterController::class, 'storeDiagnosis'])->name('diagnosis.store');
-    Route::delete('/diagnosis/{diagnosis}', [DokterController::class, 'deleteDiagnose'])->name('diagnosis.destroy');
+    Route::delete('/diagnosis/{diagnosis}', [DokterController::class, 'destroyDiagnosis'])->name('diagnosis.destroy');
 
     
 });

@@ -18,6 +18,7 @@
                                 <th class="px-4 py-2 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 font-bold uppercase tracking-wider">No. HP</th>
                                 <th class="px-4 py-2 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 font-bold uppercase tracking-wider">Tanggal Kunjungan</th>
                                 <th class="px-4 py-2 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 font-bold uppercase tracking-wider">Status</th>
+                                <th class="px-4 py-2 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 font-bold uppercase tracking-wider">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -46,6 +47,12 @@
                                                 <x-heroicon-o-clock class="w-4 h-4 mr-1 text-yellow-500"/>Belum Dilayani
                                             </span>
                                         @endif
+                                    </td>
+                                    <td class="px-4 py-2 text-center">
+                                        <a href="{{ route('pasien.detail', $visit->id) }}" class="inline-flex items-center px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded">
+                                            <x-heroicon-o-eye class="w-5 h-5 mr-1" />
+                                            Lihat Detail
+                                        </a>
                                     </td>
                                 </tr>
                             @empty

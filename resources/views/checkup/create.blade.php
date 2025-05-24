@@ -1,12 +1,12 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="text-xl font-semibold leading-tight text-gray-800">
+        <h2 class="font-semibold text-xl text-gray-800 dark:text-white leading-tight">
             Tambah Vital Sign
         </h2>
     </x-slot>
 
-    <div class="p-6 bg-white dark:bg-gray-800 rounded shadow">
-        <form action="{{ route('checkup.store', $visit->id) }}" method="POST" class="space-y-4">
+    <div class="max-w-xl mx-auto py-6">
+        <form action="{{ route('checkup.store', $visit->id) }}" method="POST" class="space-y-4 bg-white dark:bg-gray-800 p-6 rounded shadow">
             @csrf
 
             <div>

@@ -22,7 +22,7 @@ class ApotekerController extends Controller
     
     public function createPrescription(Visit $visit)
     {
-        $medicines = Medicine::all()->paginate(10);
+        $medicines = Medicine::latest()->paginate(10);
         return view('dokter.create-prescription', compact('visit', 'medicines'));
     }
 
