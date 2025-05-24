@@ -19,39 +19,52 @@
 
 ## ⚙️ Requirement
 
-- 🐘 PHP = 8.3.14
-- 📦 Composer
-- 🐬 MySQL (XAMPP atau lainnya)
-- 🟩 Node = v23.6.1
-- 🟩 Npm = v10.9.2
+| Software   | Versi         |
+|------------|---------------|
+| PHP        | 8.3.14        |
+| Composer   | Terbaru       |
+| MySQL      | (XAMPP/other) |
+| Node.js    | **v23.6.1**   |
+| npm        | **v10.9.2**   |
+
+> ⚠️ **Penting:**  
+> **Versi Node.js dan npm harus persis seperti di atas** agar proses build tidak error.  
+> Jika versi berbeda, `npm install` atau `npm run build` bisa gagal atau muncul error dependency.
 
 ---
 
 ## 🚀 Cara Instalasi
 
-1. **Clone Repository**
+### 1. Clone Repository
 
 ```bash
 git clone https://github.com/krisnayogantaraa/Klinik.git
 cd klinik
 ```
 
-2. **Install Dependency**
+### 2. Install Dependency
 
 ```bash
 composer update
 npm install
-npm run dev
 ```
 
-3. **Copy .env & Generate Key**
+### 3. Jalankan Development/Build
+
+```bash
+npm run dev
+# atau
+npm run build
+```
+
+### 4. Copy .env & Generate Key
 
 ```bash
 cp .env.example .env
 php artisan key:generate
 ```
 
-4. **Setup Database**
+### 5. Setup Database
 
 Buat database baru di MySQL (misal: `klinik_db`), lalu atur konfigurasi di file `.env`:
 
@@ -61,13 +74,13 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-5. **Migrasi & Seeder**
+### 6. Migrasi & Seeder
 
-Jika database belum ada:
+Jika database **belum ada**:
 ```bash
 php artisan migrate --seed
 ```
-Jika database sudah ada:
+Jika database **sudah ada**:
 ```bash
 php artisan migrate:fresh --seed
 ```
@@ -78,28 +91,25 @@ Seeder akan mengisi:
 - 🏥 Data dummy pasien, kunjungan, checkup, diagnosis, resep
 - 💊 Data obat
 
-6. **Jalankan Server Lokal**
+### 7. Jalankan Server Lokal
 
 ```bash
 php artisan serve
 ```
 
-Akses aplikasi di browser melalui:
-
-```
-http://localhost:8000
-```
+Akses aplikasi di browser melalui:  
+[http://localhost:8000](http://localhost:8000)
 
 ---
 
 ## 🔐 Akun Login (Seeder)
 
-| Role        | Email                        | Password |
-| ----------- | ---------------------------- | -------- |
-| 📝 Pendaftaran | pendaftaran@example.com       | password |
-| 🧑‍⚕️ Perawat     | perawat@example.com           | password |
-| 👨‍⚕️ Dokter      | dokter@example.com            | password |
-| 💊 Apoteker    | apoteker@example.com          | password |
+| Role           | Email                      | Password |
+|----------------|---------------------------|----------|
+| 📝 Pendaftaran | pendaftaran@example.com    | password |
+| 🧑‍⚕️ Perawat   | perawat@example.com        | password |
+| 👨‍⚕️ Dokter    | dokter@example.com         | password |
+| 💊 Apoteker    | apoteker@example.com       | password |
 
 ---
 
