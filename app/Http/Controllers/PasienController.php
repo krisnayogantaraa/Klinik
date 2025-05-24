@@ -74,4 +74,17 @@ class PasienController extends Controller
 
         return redirect()->route('pasien.lama')->with('success', 'Data pasien berhasil diperbarui.');
     }
+
+    public function showDetail(Visit $visit)
+    {
+
+        $visit->load([
+            'patient',
+            'checkup',
+            'diagnoses',
+            'prescriptions.medicine',
+        ]);
+
+        return view('pasien.pasien-detail', compact('visit'));
+    }
 }

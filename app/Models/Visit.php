@@ -14,9 +14,23 @@ class Visit extends Model
         'tanggal_kunjungan',
     ];
 
-    // Relasi ke Patient
     public function patient()
     {
         return $this->belongsTo(Patient::class);
+    }
+
+    public function checkup()
+    {
+        return $this->hasOne(Checkup::class);
+    }
+
+    public function prescriptions()
+    {
+        return $this->hasMany(Prescription::class);
+    }
+
+    public function diagnoses()
+    {
+        return $this->hasMany(Diagnosis::class);
     }
 }

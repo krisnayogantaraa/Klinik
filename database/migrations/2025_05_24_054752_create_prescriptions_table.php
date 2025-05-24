@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('prescriptions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('diagnosis_id')->constrained()->onDelete('cascade');
+            $table->foreignId('visit_id')->constrained()->onDelete('cascade'); // Ganti ini
             $table->foreignId('medicine_id')->constrained()->onDelete('cascade');
             $table->integer('jumlah');
             $table->string('aturan_pakai')->nullable();

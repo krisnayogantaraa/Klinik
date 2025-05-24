@@ -11,7 +11,6 @@ class Medicine extends Model
 
     protected $fillable = [
         'nama_obat',
-        'stok',
         'satuan',
     ];
 }

@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('medicines', function (Blueprint $table) {
             $table->id();
             $table->string('nama_obat');
-            $table->integer('stok')->default(0);
             $table->string('satuan');
             $table->timestamps();
         });

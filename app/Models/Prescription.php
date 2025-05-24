@@ -10,21 +10,25 @@ class Prescription extends Model
     use HasFactory;
 
     protected $fillable = [
-        'diagnosis_id',
+        'visit_id',
         'medicine_id',
         'jumlah',
         'aturan_pakai',
     ];
 
-    // Relasi ke Diagnosis
     public function diagnosis()
     {
         return $this->belongsTo(Diagnosis::class);
     }
 
-    // Relasi ke Medicine
+    public function visit()
+    {
+        return $this->belongsTo(Visit::class);
+    }
+
     public function medicine()
     {
         return $this->belongsTo(Medicine::class);
     }
+
 }

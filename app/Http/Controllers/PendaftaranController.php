@@ -9,7 +9,7 @@ class PendaftaranController extends Controller
 {
     public function index()
     {
-        $visits = Visit::with('patient')->latest()->get();
+        $visits = Visit::with('patient')->latest()->paginate(1);
         return view('dashboard.pendaftaran', compact('visits'));
     }
 }

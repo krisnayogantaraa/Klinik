@@ -17,6 +17,10 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             PatientSeeder::class,
             VisitSeeder::class,
+            MedicineSeeder::class,
+            CheckupSeeder::class,
+            DiagnosisSeeder::class,
+            PrescriptionSeeder::class,
         ]);
     }
 }

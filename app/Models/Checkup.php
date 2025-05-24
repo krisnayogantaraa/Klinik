@@ -16,13 +16,16 @@ class Checkup extends Model
         'tekanan_darah',
     ];
 
-    // Relasi ke Visit
     public function visit()
     {
         return $this->belongsTo(Visit::class);
     }
 
-    // Relasi ke User (Perawat)
+    public function diagnosis()
+    {
+        return $this->hasOne(Diagnosis::class);
+    }
+
     public function perawat()
     {
         return $this->belongsTo(User::class, 'perawat_id');
