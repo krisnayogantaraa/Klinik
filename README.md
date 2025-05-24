@@ -63,7 +63,7 @@ DB_PASSWORD=
 5. **Migrasi & Seeder**
 
 ```bash
-php artisan migrate --seed
+php artisan migrate:fresh --seed
 ```
 
 Seeder akan mengisi:
