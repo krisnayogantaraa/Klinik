@@ -28,7 +28,7 @@ class CheckupController extends Controller
             'tekanan_darah' => $request->tekanan_darah,
         ]);
 
-        return redirect()->route('pasien.detail', $visit->patient_id)->with('success', 'Vital sign berhasil ditambahkan.');
+        return redirect()->route('pasien.detail', $visit->id)->with('success', 'Vital sign berhasil ditambahkan.');
     }
 
     public function edit(Checkup $checkup)
