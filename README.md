@@ -1,24 +1,33 @@
-## Fitur Utama
 
-- Login multi-role: pendaftaran, dokter, perawat, apoteker
-- CRUD pasien & kunjungan
-- Pengisian vital sign oleh perawat
-- Diagnosa & resep obat oleh dokter
-- CRUD data obat oleh apoteker
-- Halaman detail pasien berisi seluruh informasi pemeriksaan
+<h1 align="center">🩺 Klinik App</h1>
+<p align="center">
+  <b>Aplikasi Klinik Sederhana</b><br>
+  <i>Manajemen pasien, kunjungan, diagnosa, dan apotek</i>
+</p>
 
 ---
 
-## Requirement
+## ✨ Fitur Utama
 
-- PHP >= 8.1
-- Composer
-- MySQL (XAMPP atau lainnya)
-- Node.js & npm (untuk frontend)
+- 🔑 Login multi-role: pendaftaran, dokter, perawat, apoteker
+- 👤 CRUD pasien & kunjungan
+- 🩹 Pengisian vital sign oleh perawat
+- 🩺 Diagnosa & 💊 resep obat oleh dokter
+- 💊 CRUD data obat oleh apoteker
+- 📋 Halaman detail pasien berisi seluruh informasi pemeriksaan
 
 ---
 
-## Cara Instalasi
+## ⚙️ Requirement
+
+- 🐘 PHP >= 8.1
+- 📦 Composer
+- 🐬 MySQL (XAMPP atau lainnya)
+- 🟩 Node.js & npm (untuk frontend)
+
+---
+
+## 🚀 Cara Instalasi
 
 1. **Clone Repository**
 
@@ -58,25 +67,25 @@ php artisan migrate --seed
 ```
 
 Seeder akan mengisi:
-- Role pengguna
-- Akun pengguna per role
-- Data dummy pasien, kunjungan, checkup, diagnosis, resep
-- Data obat
+- 👥 Role pengguna
+- 👤 Akun pengguna per role
+- 🏥 Data dummy pasien, kunjungan, checkup, diagnosis, resep
+- 💊 Data obat
 
 ---
 
-## Akun Login (Seeder)
+## 🔐 Akun Login (Seeder)
 
 | Role        | Email                        | Password |
 | ----------- | ---------------------------- | -------- |
-| Pendaftaran | pendaftaran@klinik.com       | password |
-| Perawat     | perawat@klinik.com           | password |
-| Dokter      | dokter@klinik.com            | password |
-| Apoteker    | apoteker@klinik.com          | password |
+| 📝 Pendaftaran | pendaftaran@klinik.com       | password |
+| 🧑‍⚕️ Perawat     | perawat@klinik.com           | password |
+| 👨‍⚕️ Dokter      | dokter@klinik.com            | password |
+| 💊 Apoteker    | apoteker@klinik.com          | password |
 
 ---
 
-## Struktur Fitur
+## 🗂️ Struktur Fitur
 
 - `routes/web.php` → Routing per role
 - `app/Http/Controllers/*` → Controller per role
@@ -85,13 +94,13 @@ Seeder akan mengisi:
 
 ---
 
-## Catatan
+## 📝 Catatan
 
 - Sistem role: [Spatie Laravel Permission](https://spatie.be/docs/laravel-permission)
 - Frontend: Blade, Tailwind CSS, Flowbite, Heroicons
 
 ---
 
-## Lisensi
+## 📄 Lisensi
 
 Bebas digunakan untuk pembelajaran atau pengembangan lanjutan.
