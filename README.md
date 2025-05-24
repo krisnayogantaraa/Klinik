@@ -1,6 +1,3 @@
-Tentu! Berikut contoh `README.md` yang bisa kamu gunakan untuk proyek Laravel aplikasi klinik kamu. Isinya sudah mencakup requirement, cara setup, dan seeder login multi-role:
-
----
 
 ````markdown
 # Aplikasi Klinik - Laravel
