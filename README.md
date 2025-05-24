@@ -1,4 +1,3 @@
-
 <h1 align="center">🩺 Klinik App</h1>
 <p align="center">
   <b>Aplikasi Klinik Sederhana</b><br>
@@ -76,6 +75,18 @@ Seeder akan mengisi:
 - 👤 Akun pengguna per role
 - 🏥 Data dummy pasien, kunjungan, checkup, diagnosis, resep
 - 💊 Data obat
+
+6. **Jalankan Server Lokal**
+
+```bash
+php artisan serve
+```
+
+Akses aplikasi di browser melalui:
+
+```
+http://localhost:8000
+```
 
 ---
 
