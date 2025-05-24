@@ -62,6 +62,11 @@ DB_PASSWORD=
 
 5. **Migrasi & Seeder**
 
+Jika database belum ada:
+```bash
+php artisan migrate --seed
+```
+Jika database sudah ada:
 ```bash
 php artisan migrate:fresh --seed
 ```
