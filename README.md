@@ -39,7 +39,7 @@ cd klinik
 2. **Install Dependency**
 
 ```bash
-composer install
+composer update
 npm install && npm run dev
 ```
 
