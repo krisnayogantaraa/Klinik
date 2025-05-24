@@ -40,7 +40,8 @@ cd klinik
 
 ```bash
 composer update
-npm install && npm run dev
+npm install
+npm run dev
 ```
 
 3. **Copy .env & Generate Key**
