@@ -21,8 +21,12 @@
     </button>
     <div class="min-h-screen flex flex-col justify-center items-center">
         <div class="w-full max-w-md bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 mt-8">
+            <a href="/" class="flex items-center text-red-500 hover:text-red-700 transition text-base font-semibold mb-4">
+                <x-heroicon-o-arrow-left class="w-5 h-5 mr-1" />
+                <span>Kembali</span>
+            </a>
             <div class="flex flex-col items-center mb-6">
-                <img src="/logo.png" class="h-14 w-14 rounded-full mb-2" alt="Logo Klinik" />
+                <img src="/logo.png" class="h-20 w-20 rounded-full mb-2" alt="Logo Klinik" />
                 <h1 class="text-2xl font-bold text-red-600 mb-1">Klinik Sehat Sentosa</h1>
                 <p class="text-gray-600 dark:text-gray-300 text-sm">Silakan login untuk melanjutkan</p>
             </div>
