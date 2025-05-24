@@ -94,10 +94,10 @@ http://localhost:8000
 
 | Role        | Email                        | Password |
 | ----------- | ---------------------------- | -------- |
-| 📝 Pendaftaran | pendaftaran@klinik.com       | password |
-| 🧑‍⚕️ Perawat     | perawat@klinik.com           | password |
-| 👨‍⚕️ Dokter      | dokter@klinik.com            | password |
-| 💊 Apoteker    | apoteker@klinik.com          | password |
+| 📝 Pendaftaran | pendaftaran@example.com       | password |
+| 🧑‍⚕️ Perawat     | perawat@example.com           | password |
+| 👨‍⚕️ Dokter      | dokter@example.com            | password |
+| 💊 Apoteker    | apoteker@example.com          | password |
 
 ---
 
