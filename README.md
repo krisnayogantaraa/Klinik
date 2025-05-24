@@ -19,10 +19,11 @@
 
 ## ⚙️ Requirement
 
-- 🐘 PHP >= 8.1
+- 🐘 PHP = 8.3.14
 - 📦 Composer
 - 🐬 MySQL (XAMPP atau lainnya)
-- 🟩 Node.js & npm (untuk frontend)
+- 🟩 Node = v23.6.1
+- 🟩 Npm = v10.9.2
 
 ---
 
